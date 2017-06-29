@@ -7,9 +7,9 @@ import datetime
 import time
 
 def fetch():
-    CONF_FILE = "./config.yaml"
-    FEED_DATA_DIR = "./data"
-    GENERATE_FILE = "./gen.yaml"
+    CONF_FILE = os.path.join(os.path.dirname(__file__), "config.yaml")
+    FEED_DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+    GENERATE_FILE = os.path.join(os.path.dirname(__file__), "gen.yaml")
     DATE_RANK = 14
 
     fetch_time = datetime.datetime.now()

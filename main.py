@@ -4,12 +4,13 @@ from fetch import fetch
 import schedule
 import time
 import datetime
+import os
 
 def gen():
-    TEMPLATE_FILE = "./index.jinja2"
-    GENERATE_FILE = "./gen.yaml"
-    CONFIG_FILE = "./config.yaml"
-    INDEX_FILE = "./web/index.html"
+    TEMPLATE_FILE = os.path.join(os.path.dirname(__file__), "index.jinja2")
+    GENERATE_FILE = os.path.join(os.path.dirname(__file__), "gen.yaml")
+    CONFIG_FILE = os.path.join(os.path.dirname(__file__), "config.yaml")
+    INDEX_FILE = os.path.join(os.path.dirname(__file__), "web/index.html")
 
     with open(TEMPLATE_FILE) as f:
         template = jinja2.Template(f.read())
@@ -29,7 +30,7 @@ def job():
 
 job()
 
-schedule.every(30).minutes.do(job)
+schedule.every().hour.do(job)
 while True:
     schedule.run_pending()
-    time.sleep(1)
+    time.sleep(30)
