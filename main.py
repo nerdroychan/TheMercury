@@ -35,6 +35,8 @@ def job():
         with open("error.log", "w+") as f:
             f.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " Error while generating.")
 
+job()
+
 schedule.every(30).minutes.do(job)
 while True:
     schedule.run_pending()
