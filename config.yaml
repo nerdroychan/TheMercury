@@ -1,0 +1,12 @@
+title: The Mercury
+
+subscriptions:
+    - title: FiveYellowMice
+      url  : https://fiveyellowmice.com/feed.xml
+      site : https://fiveyellowmice.com/
+    - title: 依云
+      url  : http://blog.lilydjwg.me/feed
+      site : http://blog.lilydjwg.me/
+    - title: 云风
+      url  : http://blog.codingnow.com/atom.xml
+      site : http://blog.codingnow.com/

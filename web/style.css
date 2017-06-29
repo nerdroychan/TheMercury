@@ -1,0 +1,66 @@
+html {
+  background: #ddd url("noise.png") repeat;
+  background-attachment: fixed;
+}
+
+a:link { color: #336699; text-decoration: none; }
+
+a:visited { color: #336699; }
+
+a:hover { color: #996633; }
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.17em; }
+h3 { font-size: 1.12em; }
+h4 { font-size: .83em; }
+h5 { font-size: .75em; }
+h6 { font-size: .5em; }
+
+.main {
+  background-color: #fefefe;
+  width: 800px;
+  margin: 2em auto;
+  padding: 1em 2em 1.5em 2em;
+  box-shadow: 0px 0px 20px 2px #888;
+}
+
+.head {
+  background-color: #fefefe;
+  box-shadow: 0px 0px 20px 2px #888;
+  width: 800px;
+  margin: 2em auto;
+  padding: 1em 2em 1.2em 2em;
+}
+
+.head .title {
+  text-shadow: 0px 0px 16px #bbb;
+  font-size: 64px;
+  text-align: center;
+  font-family: Georgia;
+}
+
+.head .meta {
+  font-size: 12px;
+  font-style: italic;
+  color: gray;
+  text-align: center;
+}
+
+.main p {
+  font-family: 'Trebuchet MS', 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.main .time {
+  font-size: 12px;
+  margin-top: -1.5em;
+  margin-bottom: 2em;
+  color: #333;
+}
+
+.main img {
+  max-width: 100%;
+}
+
+.main pre {
+  overflow: scroll;
+}
