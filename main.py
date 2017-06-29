@@ -30,7 +30,26 @@ def job():
 
 job()
 
-schedule.every().hour.do(job)
+schedule.every().day.at("00:00").do(job)
+schedule.every().day.at("01:00").do(job)
+schedule.every().day.at("06:00").do(job)
+schedule.every().day.at("07:30").do(job)
+schedule.every().day.at("09:00").do(job)
+schedule.every().day.at("10:00").do(job)
+schedule.every().day.at("11:00").do(job)
+schedule.every().day.at("12:00").do(job)
+schedule.every().day.at("13:00").do(job)
+schedule.every().day.at("14:00").do(job)
+schedule.every().day.at("15:00").do(job)
+schedule.every().day.at("16:00").do(job)
+schedule.every().day.at("17:00").do(job)
+schedule.every().day.at("18:00").do(job)
+schedule.every().day.at("19:00").do(job)
+schedule.every().day.at("20:00").do(job)
+schedule.every().day.at("21:00").do(job)
+schedule.every().day.at("22:00").do(job)
+schedule.every().day.at("23:00").do(job)
+
 while True:
     schedule.run_pending()
-    time.sleep(30)
+    time.sleep(schedule.idle_seconds())
