@@ -4,9 +4,18 @@ subscriptions:
     - title: FiveYellowMice
       url  : https://fiveyellowmice.com/feed.xml
       site : https://fiveyellowmice.com/
-    - title: 依云
+    - title: 依云's Blog
       url  : http://blog.lilydjwg.me/feed
       site : http://blog.lilydjwg.me/
-    - title: 云风
+    - title: 云风的博客
       url  : http://blog.codingnow.com/atom.xml
       site : http://blog.codingnow.com/
+    - title: Phoenix's Island
+      url  : https://blog.phoenixlzx.com/atom.xml
+      site : https://blog.phoenixlzx.com/
+    - title: Beyong the Void
+      url  : https://www.byvoid.com/feed
+      site : https://www.byvoid.com/
+    - title: DBANotes
+      url  : http://dbanotes.net/feed
+      site : http://dbanotes.net/
