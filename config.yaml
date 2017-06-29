@@ -13,12 +13,15 @@ subscriptions:
     - title: 云风的博客
       url  : http://blog.codingnow.com/atom.xml
       site : http://blog.codingnow.com/
-    - title: Phoenix's Island
-      url  : https://blog.phoenixlzx.com/atom.xml
-      site : https://blog.phoenixlzx.com/
     - title: Beyong the Void
       url  : https://www.byvoid.com/feed
       site : https://www.byvoid.com/
-    - title: DBANotes
-      url  : http://dbanotes.net/feed
-      site : http://dbanotes.net/
+    - title: Blahgeek's Blog
+      url  : https://blog.blahgeek.com/feeds/all.rss.xml
+      site : https://blog.blahgeek.com/
+    - title: Capbone
+      url  : http://capbone.com/feed/
+      site : http://capbone.com/
+    - title: Yuxin's Blog
+      url  : http://ppwwyyxx.com/atom.xml
+      site : http://ppwwyyxx.com/
