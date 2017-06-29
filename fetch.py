@@ -2,7 +2,6 @@ import yaml
 import feedparser
 import os
 import shutil
-import uuid
 import datetime
 import time
 
@@ -50,7 +49,7 @@ def fetch():
                 output = {"status": 1, "subscription": s, "entries": entries}
         except:
             output = {"status": 0, "subscription": s, "entries": None}
-        with open(os.path.join(FEED_DATA_DIR, ".".join([str(uuid.uuid4().hex), "yaml"])), "w") as f:
+        with open(os.path.join(FEED_DATA_DIR, ".".join(s["title"], "yaml"])), "w") as f:
             yaml.dump(output, f, allow_unicode=True)
 
     # Generate the time-sorted YAML file to GENERATE_FILE
