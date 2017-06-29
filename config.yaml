@@ -1,6 +1,9 @@
 title: The Mercury
 
 subscriptions:
+    - title: Solidot
+      url  : http://www.solidot.org/index.rss
+      site : http://www.solidot.org/
     - title: FiveYellowMice
       url  : https://fiveyellowmice.com/feed.xml
       site : https://fiveyellowmice.com/
