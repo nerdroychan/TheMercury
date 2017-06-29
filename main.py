@@ -24,11 +24,7 @@ def gen():
         f.write(template.render(title=conf["title"], update_time=gen["update_time"], entries=gen["entries"], victims=gen["fail_list"]))
 
 def job():
-    try:
-        fetch()
-    except:
-        with open("error.log", "w+") as f:
-            f.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " Error while fetching.")
+    fetch()
     gen()
 
 job()
