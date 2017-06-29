@@ -43,7 +43,7 @@ def fetch():
                         "content": c,
                         "subscription": s
                     })
-            if entries == []:
+            if f.entries == []:
                 output = {"status": 0, "subscription": s, "entries": None}
             else:
                 output = {"status": 1, "subscription": s, "entries": entries}
