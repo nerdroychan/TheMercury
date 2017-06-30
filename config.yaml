@@ -37,3 +37,6 @@ subscriptions:
     - title: FiveYellowMice
       url  : https://fiveyellowmice.com/feed.xml
       site : https://fiveyellowmice.com/
+    - title: Phoenix's island
+      url  : https://blog.phoenixlzx.com/atom.xml
+      site : https://blog.phoenixlzx.com/

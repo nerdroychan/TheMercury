@@ -5,12 +5,13 @@ import shutil
 import datetime
 import time
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 def fetch():
     CONF_FILE = os.path.join(os.path.dirname(__file__), "config.yaml")
     FEED_DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
     GENERATE_FILE = os.path.join(os.path.dirname(__file__), "gen.yaml")
-    DATE_RANK = 14
+    DATE_RANK = 30
 
     fetch_time = datetime.datetime.now()
 
@@ -38,6 +39,27 @@ def fetch():
                     if e.get("content"):
                         c = "".join([e.content[i].value for i in range(len(e.content))])
                     soup = BeautifulSoup(c, "html5lib")
+                    # Make all links to be open on a new tab
+                    a = soup.find_all("a")
+                    for i in a:
+                        i["target"] = "_blank"
+                    # Fix relative path
+                    for i in a:
+                        if i.get("href"):
+                            if not (i["href"].startswith("https://") or i["href"].startswith("http://")):
+                                if i["href"].startswith("/"):
+                                    i["href"] = urljoin(s["site"], i["href"])
+                                else:
+                                    i["href"] = urljoin(e.link, i["href"])
+                    a = soup.find_all("img")
+                    for i in a:
+                        if i.get("src"):
+                            if not (i["src"].startswith("https://") or i["src"].startswith("http://")):
+                                if i["src"].startswith("/"):
+                                    i["src"] = urljoin(s["site"], i["src"])
+                                else:
+                                    i["src"] = urljoin(e.link, i["src"])
+                    # Prettify the html
                     c = soup.prettify()
                     entries.append({
                         "title": e.title,
