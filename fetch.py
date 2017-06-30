@@ -34,7 +34,7 @@ def fetch():
             entries = []
             f = feedparser.parse(s["url"])
             for e in f.entries:
-                if abs(fetch_time-datetime.datetime.fromtimestamp(time.mktime(e.updated_parsed))).days <= DATE_RANK:
+                if abs(fetch_time-datetime.datetime.fromtimestamp(time.mktime(e.published_parsed))).days <= DATE_RANK:
                     if e.get("content"):
                         c = "".join([e.content[i].value for i in range(len(e.content))])
                     elif e.get("summary"):
@@ -101,7 +101,7 @@ def fetch():
 
     gen["entries"].sort(key=lambda x: x["date"], reverse=True)
     for e in gen["entries"]:
-        e["date"] = time.strftime("%Y-%m-%d", e["date"])
+        e["date"] = (datetime.datetime.fromtimestamp(time.mktime(e["date"])) + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
 
     with open(".".join([GENERATE_FILE, "tmp"]), "w") as f:
         yaml.dump(gen, f, allow_unicode=True)

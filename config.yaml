@@ -37,3 +37,6 @@ subscriptions:
     - title: Phoenix's island
       url  : https://blog.phoenixlzx.com/atom.xml
       site : https://blog.phoenixlzx.com/
+    - title: Solidot
+      url  : http://www.solidot.org/index.rss
+      site : http://www.solidot.org/
