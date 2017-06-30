@@ -101,7 +101,7 @@ def fetch():
 
     gen["entries"].sort(key=lambda x: x["date"], reverse=True)
     for e in gen["entries"]:
-        e["date"] = time.strftime("%Y-%m-%d %H:%M:%S", e["date"])
+        e["date"] = time.strftime("%Y-%m-%d %H:%M:%S %z", e["date"])
 
     with open(".".join([GENERATE_FILE, "tmp"]), "w") as f:
         yaml.dump(gen, f, allow_unicode=True)
