@@ -66,7 +66,7 @@ def fetch():
                     c = soup.prettify()
                     entries.append({
                         "title": e.title,
-                        "date": e.updated_parsed,
+                        "date": e.published_parsed,
                         "link": e.link,
                         "content": c,
                         "subscription": s
@@ -101,7 +101,7 @@ def fetch():
 
     gen["entries"].sort(key=lambda x: x["date"], reverse=True)
     for e in gen["entries"]:
-        e["date"] = time.strftime("%Y-%m-%d %H:%M:%S %z", e["date"])
+        e["date"] = time.strftime("%Y-%m-%d", e["date"])
 
     with open(".".join([GENERATE_FILE, "tmp"]), "w") as f:
         yaml.dump(gen, f, allow_unicode=True)
