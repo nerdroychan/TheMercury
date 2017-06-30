@@ -28,9 +28,6 @@ subscriptions:
     - title: delphij's chaos
       url  : https://blog.delphij.net/atom.xml
       site : https://blog.delphij.net/
-    - title: Solidot
-      url  : http://www.solidot.org/index.rss
-      site : http://www.solidot.org/
     - title: FreeBSD News Flash
       url  : https://www.freebsd.org/news/rss.xml
       site : https://www.freebsd.org/news/
