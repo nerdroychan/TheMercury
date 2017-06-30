@@ -22,7 +22,7 @@ def gen():
         conf = yaml.load(f.read())
 
     with open(INDEX_FILE, "w") as f:
-        f.write(template.render(title=conf["title"], update_time=gen["update_time"], entries=gen["entries"], victims=gen["fail_list"], subscriptions=conf["subscriptions"]))
+        f.write(template.render(title=conf["title"], update_time=gen["update_time"], entries=gen["entries"], victims=gen["fail_list"], subscriptions=sorted(conf["subscriptions"], key=lambda x: x["title"])))
 
 def job():
     fetch()
