@@ -22,12 +22,18 @@ subscriptions:
     - title: Yuxin's Blog
       url  : http://ppwwyyxx.com/atom.xml
       site : http://ppwwyyxx.com/
-    - title: 酷壳
-      url  : http://coolshell.cn/feed
-      site : http://coolshell.cn/
-    - title: 伯乐在线
-      url  : http://blog.jobbole.com/feed
-      site : http://blog.jobbole.com/
-    - title: 阮一峰的博客
-      url  : http://www.ruanyifeng.com/blog/atom.xml
-      site : http://www.ruanyifeng.com/blog/
+    - title: chinagfw.org
+      url  : http://www.chinagfw.org/feeds/posts/default?alt=rss
+      site : http://www.chinagfw.org/
+    - title: 政见
+      url  : http://cnpolitics.org/feed/
+      site : http://cnpolitics.org/
+    - title: 知乎精选
+      url  : https://www.zhihu.com/rss
+      site : https://www.zhihu.com/
+    - title: 中国数字时代
+      url  : http://feeds.feedburner.com/chinadigitaltimes/IyPt
+      site : http://chinadigitaltimes.net/chinese/
+    - title: 吴非
+      url  : http://blog.sina.com.cn/rss/1916167487.xml
+      site : http://blog.sina.com.cn/wufei2011
