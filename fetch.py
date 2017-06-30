@@ -86,7 +86,7 @@ def fetch():
         "success_list": [],
         "fail_list": [],
         "entries": [],
-        "update_time": fetch_time.strftime("%Y-%m-%d %H:%M:%S")
+        "update_time": fetch_time.strftime("%Y-%m-%d %H:%M")
     }
     for root, dirs, files in os.walk(FEED_DATA_DIR):
         for file in files:
