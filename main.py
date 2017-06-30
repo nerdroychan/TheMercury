@@ -24,10 +24,12 @@ def gen():
     with open(INDEX_FILE, "w") as f:
         f.write(template.render(title=conf["title"], update_time=gen["update_time"], entries=gen["entries"], victims=gen["fail_list"], subscriptions=sorted(conf["subscriptions"], key=lambda x: x["title"])))
 
+    return len(gen["fail_list"])
+
 def job():
     fetch()
-    gen()
-    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + " Job succeed")
+    f = gen()
+    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S").join(["[", "]"]) + " Job finished with " + str(f) + " failures.")
 
 job()
 

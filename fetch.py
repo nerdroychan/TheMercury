@@ -35,9 +35,12 @@ def fetch():
             f = feedparser.parse(s["url"])
             for e in f.entries:
                 if abs(fetch_time-datetime.datetime.fromtimestamp(time.mktime(e.updated_parsed))).days <= DATE_RANK:
-                    c = e.summary
                     if e.get("content"):
                         c = "".join([e.content[i].value for i in range(len(e.content))])
+                    elif e.get("summary"):
+                        c = e["summary"]
+                    else:
+                        c = "Content not available, use the link to see it."
                     soup = BeautifulSoup(c, "html5lib")
                     # Make all links to be open on a new tab
                     a = soup.find_all("a")
