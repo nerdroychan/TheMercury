@@ -28,12 +28,6 @@ subscriptions:
     - title: 政见
       url  : http://cnpolitics.org/feed/
       site : http://cnpolitics.org/
-    - title: 知乎精选
-      url  : https://www.zhihu.com/rss
-      site : https://www.zhihu.com/
-    - title: 中国数字时代
-      url  : http://feeds.feedburner.com/chinadigitaltimes/IyPt
-      site : http://chinadigitaltimes.net/chinese/
     - title: 吴非
       url  : http://blog.sina.com.cn/rss/1916167487.xml
       site : http://blog.sina.com.cn/wufei2011
