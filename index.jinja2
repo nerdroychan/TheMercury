@@ -15,10 +15,8 @@
 
 <div class="head">
     <div class="title">{{ title }}</div>
-    <div class="meta">
-    Last updated on {{ update_time }}
-    <br>
-    {{ victims | length }} failed sync occured{% if victims %}: {% for s in victims %}{{ s["title"] }} {% endfor %}{% endif %}
+    <div class="list">
+    Subscriptions: {% for s in subscriptions %} &lt;<a href="{{ s.site }}" target="_blank">{{ s.title }}</a>&gt; {% endfor %}
     </div>
 </div>
 
@@ -29,6 +27,13 @@
     {{ e["content"] | safe }}
 </div>
 {% endfor %}
+
+<div class="foot">
+Built by <a href="https://www.roychan.org/">Roy Chan</a> using Jinja2, py-feedparser, beautifulsoup, pyyaml and py-schedule.
+<div class="status">
+Sync on {{ update_time }} with <a title="{% if victims %}Failure list:{% for s in victims %}&#013;{{ s['title'] }}{% endfor %}{% endif %}">{{ victims | length }}</a> failure(s)
+</div>
+</div>
 
 </body>
 

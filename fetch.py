@@ -4,6 +4,7 @@ import os
 import shutil
 import datetime
 import time
+from bs4 import BeautifulSoup
 
 def fetch():
     CONF_FILE = os.path.join(os.path.dirname(__file__), "config.yaml")
@@ -35,7 +36,9 @@ def fetch():
                 if abs(fetch_time-datetime.datetime.fromtimestamp(time.mktime(e.updated_parsed))).days <= DATE_RANK:
                     c = e.summary
                     if e.get("content"):
-                        c = ".".join([e.content[i].value for i in range(len(e.content))])
+                        c = "".join([e.content[i].value for i in range(len(e.content))])
+                    soup = BeautifulSoup(c, "html5lib")
+                    c = soup.prettify()
                     entries.append({
                         "title": e.title,
                         "date": e.updated_parsed,

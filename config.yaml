@@ -1,9 +1,6 @@
 title: The Mercury
 
 subscriptions:
-    - title: FiveYellowMice
-      url  : https://fiveyellowmice.com/feed.xml
-      site : https://fiveyellowmice.com/
     - title: 依云's Blog
       url  : http://blog.lilydjwg.me/feed
       site : http://blog.lilydjwg.me/
@@ -22,9 +19,6 @@ subscriptions:
     - title: Yuxin's Blog
       url  : http://ppwwyyxx.com/atom.xml
       site : http://ppwwyyxx.com/
-    - title: 政见
-      url  : http://cnpolitics.org/feed/
-      site : http://cnpolitics.org/
     - title: 吴非
       url  : http://blog.sina.com.cn/rss/1916167487.xml
       site : http://blog.sina.com.cn/wufei2011
@@ -34,4 +28,12 @@ subscriptions:
     - title: delphij's chaos
       url  : https://blog.delphij.net/atom.xml
       site : https://blog.delphij.net/
-    
+    - title: Solidot
+      url  : http://www.solidot.org/index.rss
+      site : http://www.solidot.org/
+    - title: FreeBSD News Flash
+      url  : https://www.freebsd.org/news/rss.xml
+      site : https://www.freebsd.org/news/
+    - title: FiveYellowMice
+      url  : https://fiveyellowmice.com/feed.xml
+      site : https://fiveyellowmice.com/
