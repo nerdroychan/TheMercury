@@ -5,6 +5,7 @@ import schedule
 import time
 import datetime
 import os
+from bs4 import BeautifulSoup
 
 def gen():
     TEMPLATE_FILE = os.path.join(os.path.dirname(__file__), "index.jinja2")
@@ -22,7 +23,11 @@ def gen():
         conf = yaml.load(f.read())
 
     with open(INDEX_FILE, "w") as f:
-        f.write(template.render(title=conf["title"], update_time=gen["update_time"], entries=gen["entries"], victims=gen["fail_list"], subscriptions=sorted(conf["subscriptions"], key=lambda x: x["title"])))
+        f.write(BeautifulSoup(template.render(title=conf["title"],
+                              update_time=gen["update_time"],
+                              entries=gen["entries"],
+                              victims=gen["fail_list"],
+                              subscriptions=sorted(conf["subscriptions"], key=lambda x: x["title"])), "html5lib").prettify())
 
 def job():
     fetch()
