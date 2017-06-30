@@ -22,3 +22,12 @@ subscriptions:
     - title: Yuxin's Blog
       url  : http://ppwwyyxx.com/atom.xml
       site : http://ppwwyyxx.com/
+    - title: 酷壳
+      url  : http://coolshell.cn/feed
+      site : http://coolshell.cn/
+    - title: 伯乐在线
+      url  : http://blog.jobbole.com/feed
+      site : http://blog.jobbole.com/
+    - title: 阮一峰的博客
+      url  : http://www.ruanyifeng.com/blog/atom.xml
+      site : http://www.ruanyifeng.com/blog/
