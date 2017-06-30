@@ -46,6 +46,10 @@ h6 { font-size: .5em; }
   font-size: 10px;
 }
 
+.head .list #ss {
+  white-space: nowrap;
+}
+
 .main{
   font-family: 'Trebuchet MS', 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
 }
