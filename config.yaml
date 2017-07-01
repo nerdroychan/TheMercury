@@ -40,3 +40,6 @@ subscriptions:
     - title: Solidot
       url  : http://www.solidot.org/index.rss
       site : http://www.solidot.org/
+    - title: 木遥的窗子
+      url  : http://blog.farmostwood.net/feed
+      site : http://blog.farmostwood.net/
