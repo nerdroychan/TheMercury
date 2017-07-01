@@ -62,6 +62,9 @@ def fetch():
                                     i["src"] = urljoin(s["site"], i["src"])
                                 else:
                                     i["src"] = urljoin(e.link, i["src"])
+                            if i["src"].startswith("http://"):
+                                i["src"] = "./non-https.png"
+                                i["style"] = "width: 480px;"
                     # Prettify the html
                     c = soup.prettify()
                     entries.append({
