@@ -37,9 +37,6 @@ subscriptions:
     - title: Phoenix's island
       url  : https://blog.phoenixlzx.com/atom.xml
       site : https://blog.phoenixlzx.com/
-    - title: 阮一峰的博客
-      url  : http://www.ruanyifeng.com/blog/atom.xml
-      site : http://www.ruanyifeng.com/
     - title: 木遥的窗子
       url  : http://blog.farmostwood.net/feed
       site : http://blog.farmostwood.net/
